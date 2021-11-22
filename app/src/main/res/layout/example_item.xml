@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="10dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@anim/animation_card"
+    android:clickable="true"
+    app:cardCornerRadius="15dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rvView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/labelTartibRaqami"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:text="Tartib Raqami: "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtDocument_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/labelTartibRaqami"
+            android:layout_toRightOf="@+id/labelTartibRaqami"
+            android:paddingLeft="4dp"
+            android:hint="Tartib raqami"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/labelSanasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelTartibRaqami"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Sanasi             :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtDocument_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelTartibRaqami"
+            android:layout_toEndOf="@+id/labelTartibRaqami"
+            android:layout_toRightOf="@+id/labelTartibRaqami"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="document_date"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/labelTuri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelSanasi"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Turi                  :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtName_uz_latin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDocument_date"
+            android:layout_toEndOf="@+id/labelTuri"
+            android:layout_toRightOf="@+id/labelTuri"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="document_type"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/labelTuzuvchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelTuri"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Tuzuvchi         :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtLastname_uz_latin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName_uz_latin"
+            android:layout_toEndOf="@+id/labelTuzuvchi"
+            android:layout_toRightOf="@+id/labelTuzuvchi"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="Tuzuvchi"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/labelYuboruvchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelTuzuvchi"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Yuboruvchi     :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtFrom_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLastname_uz_latin"
+            android:layout_toEndOf="@+id/labelYuboruvchi"
+            android:layout_toRightOf="@+id/labelYuboruvchi"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="Yuboruvchi"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/labelQabulQiluvchi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFrom_department"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="Qabul qiluvchi:"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/txtTo_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFrom_department"
+            android:layout_toEndOf="@+id/labelQabulQiluvchi"
+            android:layout_toRightOf="@+id/labelQabulQiluvchi"
+            android:paddingLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="Qabul qiluvchi"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/labelKutilayotganHarakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTo_department"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="4dp"
+            android:text="Kutilayotgan : \n harakat"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtDocument_signers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTo_department"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/labelKutilayotganHarakat"
+            android:layout_toRightOf="@+id/labelKutilayotganHarakat"
+            android:hint="Kutilayotgan harakat"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDocument_signers"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/labelKutilayotganHarakat"
+            android:layout_toRightOf="@+id/labelKutilayotganHarakat"
+            android:fontFamily="serif"
+            android:hint="STATUS"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPdf_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDocument_signers"
+            android:layout_toEndOf="@+id/txtStatus"
+            android:layout_toRightOf="@+id/labelKutilayotganHarakat"
+            android:paddingLeft="4dp"
+            android:hint="pdf_file_name"
+            android:text=""
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

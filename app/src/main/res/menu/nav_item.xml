@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/my_account"
+        >
+        <menu>
+            <item
+                android:id="@+id/Kiruvchi"
+                android:title="Kiruvchi"
+                android:icon="@drawable/document"
+                />
+            <item
+                android:id="@+id/Chiquvchi"
+                android:title="Chiquvchi"
+                android:icon="@drawable/document"
+                />
+            <item
+                android:id="@+id/Qoralama"
+                android:title="Qoralama"
+                android:icon="@drawable/document"
+                />
+            <item
+                android:id="@+id/Bekor"
+                android:title="Bekor Qilingan"
+                android:icon="@drawable/document"
+                />
+        </menu>
+
+    </item>
+    <item
+        android:title="@string/contact"
+        >
+        <menu>
+            <item
+                android:id="@+id/Ulashish"
+                android:title="Ulashish"
+                android:icon="@drawable/sharebutton"
+                />
+            <item
+                android:id="@+id/Imzo"
+                android:title="Eimzo"
+                android:icon="@drawable/eimzo"
+                />
+        </menu>
+
+
+    </item>
+
+
+</menu>

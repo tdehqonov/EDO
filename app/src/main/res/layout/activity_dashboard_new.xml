@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_dashboard_new"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="6dp"
+        android:textColor="#3F51B5"
+        android:text="Hujjatlar Aylanmasi"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textSize="35sp"/>
+
+        <GridLayout
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:layout_gravity="center"
+            android:columnCount="2" >
+
+            <androidx.cardview.widget.CardView
+
+
+                android:id="@+id/cvKiruvchiHujjatlar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="fill"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation"
+                android:clickable="true"
+                card_view:cardElevation="10dp"
+                android:layout_row = "0"
+                android:layout_column = "0"
+                android:layout_rowWeight = "1"
+                android:layout_columnWeight = "1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="15dp"
+                android:elevation="8dp" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="25dp"
+                            android:text="KIRUVCHI"
+                            android:textSize="20sp"
+                            android:textColor="#3F51B5"
+                            android:fontFamily="sans-serif-medium"
+                            />
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_new_count_inbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#8275ff"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="0/"
+                            />
+                        <TextView
+                            android:id="@+id/tv_count_inbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00d669"
+                            android:textSize="30sp"
+                            android:text="0"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvChiquvchiHujjatlar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "0"
+                android:layout_column = "1"
+                android:layout_gravity="fill"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation"
+                android:clickable="true"
+                card_view:cardElevation="10dp"
+                android:layout_rowWeight = "1"
+                android:layout_columnWeight = "1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="15dp"
+                android:elevation="8dp" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="25dp"
+                        android:text="CHIQUVCHI"
+                        android:textSize="20sp"
+                        android:textColor="#3F51B5"
+                        android:fontFamily="sans-serif-medium"
+                        />
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_new_count_outbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#8275ff"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="0/"
+                            />
+                        <TextView
+                            android:id="@+id/tv_count_outbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00d669"
+                            android:textSize="30sp"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvQoralamaHujjatlar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "1"
+                android:layout_column = "0"
+                android:layout_gravity="fill"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation"
+                android:clickable="true"
+                card_view:cardElevation="10dp"
+                android:layout_rowWeight = "1"
+                android:layout_columnWeight = "1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="15dp"
+                android:elevation="8dp" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="25dp"
+                        android:text="QORALAMA"
+                        android:textSize="20sp"
+                        android:textColor="#3F51B5"
+                        android:fontFamily="sans-serif-medium"
+                        />
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_new_count_draft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#8275ff"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="0/"
+                            />
+                        <TextView
+                            android:id="@+id/tv_count_draft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00d669"
+                            android:textSize="30sp"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBekorQilinganHujjatlar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row = "1"
+                android:layout_column = "1"
+                android:layout_gravity="fill"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation"
+                android:clickable="true"
+                card_view:cardElevation="10dp"
+                android:layout_rowWeight = "1"
+                android:layout_columnWeight = "1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="15dp"
+                android:elevation="8dp" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="25dp"
+                        android:text="   BEKOR\nQILINGAN"
+                        android:textSize="20sp"
+                        android:textColor="#3F51B5"
+                        android:fontFamily="sans-serif-medium"
+                        />
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_new_count_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#8275ff"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="0/"
+                            />
+                        <TextView
+                            android:id="@+id/tv_count_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00d669"
+                            android:textSize="30sp"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearpie"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center">
+    <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

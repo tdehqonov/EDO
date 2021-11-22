@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivNotificationTimerID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_timer_sand" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationTimer"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationTimerID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationLightningID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationTimerID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_lightning_bolt_outline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationLightning"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationLightningID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLightning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationAlertID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationLightningID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_alert_outline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationAlert"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationAlertID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationPlusID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationAlertID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bell_plus_outline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationPlus"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationPlusID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ImageView
+        android:id="@+id/ivNotificationChekID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationPlusID"
+        app:layout_constraintTop_toTopOf="parent"
+         app:srcCompat="@drawable/ic_bell_check_outline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationChek"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationChekID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvChek"
+                android:layout_width="7dp"
+                android:layout_height="17dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationSearchID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationChekID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationSearch"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationSearchID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="7dp"
+                android:layout_height="17dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ImageView
+        android:id="@+id/ivNotificationFierID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationSearchID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_fire" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationFier"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="@android:color/holo_red_light"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationFierID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvFier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationMailID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationFierID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_email_outline" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationMile"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationMailID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/ivNotificationStartID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationMailID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_star" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationStart"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationStartID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivNotificationInfoID"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/ivNotificationStartID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_undov" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNotificationInfo"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:cardBackgroundColor="#4CAF50"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivNotificationInfoID"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

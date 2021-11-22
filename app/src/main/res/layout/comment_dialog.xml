@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="45dp"
+        android:text="  Amal"
+        android:textStyle="normal"
+        android:fontFamily="serif"
+        android:background="?attr/colorButtonNormal"
+        android:textColor="@color/black"
+
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Izohlar"
+            android:padding="5dp"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/dialogNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_input"
+            android:drawablePadding="14dp"
+            android:hint="Izoh kiriting"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/dialogBtnAccept"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="178dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_custom"
+                android:text="TASDIQLAYMAN"
+                android:textColor="#3DDC84" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

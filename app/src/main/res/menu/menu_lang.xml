@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuOzbek"
+        android:title="O'zbekcha"
+        />
+    <item
+        android:id="@+id/memuUzbek"
+        android:title="Узбекча"
+        />
+    <item
+        android:id="@+id/menuRusskiy"
+        android:title="Русский"
+        />
+</menu>
