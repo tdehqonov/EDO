@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ProgressBar
+import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -18,6 +19,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import kotlinx.android.synthetic.main.fragment_notification.*
 import kotlinx.android.synthetic.main.fragment_notification.view.*
 import kotlinx.android.synthetic.main.layouy_pagination.*
 import kotlinx.android.synthetic.main.layouy_pagination.view.*
@@ -46,6 +48,7 @@ class DocFragment : Fragment(), ExampleAdapter.OnItemClickListener, View.OnClick
     var progressBar: ProgressBar? = null
     var jsonObjectResponse: JSONObject? = null
     var tuzuvch_fio = ""
+
     var from = 0
     var to = 0
     var total = 0
@@ -53,6 +56,8 @@ class DocFragment : Fragment(), ExampleAdapter.OnItemClickListener, View.OnClick
     var itemsPerPage = 20
     var last_page = 0
     var izohlarButtonStatus=false
+    var content:String?=null
+    var document_number:String?=null
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -91,6 +96,68 @@ class DocFragment : Fragment(), ExampleAdapter.OnItemClickListener, View.OnClick
         view.ivBackID.setOnClickListener(this)
         view.ivBottomID.setOnClickListener(this)
         view.ivRightID.setOnClickListener(this)
+        // perform set on query text listener event
+        // perform set on query text listener event
+       view.simpleSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                content=query
+                RequsetWithFilter(token_type, access_token, document_type, page, itemsPerPage)
+                text_docs?.text = when(document_type) {
+                    "inbox" -> "Kiruvchi Hujjatlar"
+                    "outbox" -> "Chiquvchi Hujjatlar"
+                    "draft" -> "Qoralama Hujjatlar"
+                    "cancel" -> "Bekor Qilingan"
+                    else -> "$document_type"
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                content=newText
+                RequsetWithFilter(token_type, access_token, document_type, page, itemsPerPage)
+                text_docs?.text = when(document_type) {
+                    "inbox" -> "Kiruvchi Hujjatlar"
+                    "outbox" -> "Chiquvchi Hujjatlar"
+                    "draft" -> "Qoralama Hujjatlar"
+                    "cancel" -> "Bekor Qilingan"
+                    else -> "$document_type"
+                }
+                return false
+            }
+
+        })
+
+        view.svDocumentNumber.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                document_number=query
+                RequsetWithFilter(token_type, access_token, document_type, page, itemsPerPage)
+                text_docs?.text = when(document_type) {
+                    "inbox" -> "Kiruvchi Hujjatlar"
+                    "outbox" -> "Chiquvchi Hujjatlar"
+                    "draft" -> "Qoralama Hujjatlar"
+                    "cancel" -> "Bekor Qilingan"
+                    else -> "$document_type"
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                document_number=newText
+                RequsetWithFilter(token_type, access_token, document_type, page, itemsPerPage)
+                text_docs?.text = when(document_type) {
+                    "inbox" -> "Kiruvchi Hujjatlar"
+                    "outbox" -> "Chiquvchi Hujjatlar"
+                    "draft" -> "Qoralama Hujjatlar"
+                    "cancel" -> "Bekor Qilingan"
+                    else -> "$document_type"
+                }
+                return false
+            }
+
+        })
+
+
+
 
         return view
     }
@@ -297,10 +364,17 @@ class DocFragment : Fragment(), ExampleAdapter.OnItemClickListener, View.OnClick
 
                 //Change with your post params
                 params2.put("attributes", "[]")
-                params2.put("content", "\"\"")
+                if (content.isNullOrEmpty()==true || content!!.isBlank()==true)
+                    params2.put("content", "\"\"")
+                else
+                params2.put("content", "\"$content\"")
                 params2.put("created_by", "\"\"")
                 params2.put("document_end_date", "\"\"")
-                params2.put("document_number", "\"\"")
+
+                if (document_number.isNullOrEmpty()==true || document_number!!.isBlank()==true)
+                    params2.put("document_number", "\"\"")
+                else
+                    params2.put("document_number", "\"$document_number\"")
                 params2.put("document_start_date", "\"\"")
                 params2.put("document_template_id", "0")
                 params2.put("document_type_id", "0")

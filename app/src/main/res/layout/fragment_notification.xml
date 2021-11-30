@@ -22,8 +22,40 @@
             android:gravity="center"
             android:text="Hujjatlar"
             android:textColor="#3F51B5"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <android.widget.SearchView
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/svDocumentNumber"
+                android:elevation="2dp"
+                android:queryHint="Nomeridan qidirish "
+                android:background="#fff">
+            </android.widget.SearchView>
+
+            <android.widget.SearchView
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/simpleSearchView"
+                android:elevation="2dp"
+                android:queryHint="Textdan qidirish"
+                android:background="#fff">
+            </android.widget.SearchView>
+
+
+        </LinearLayout>
+
+
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -31,17 +63,20 @@
     android:orientation="vertical"
     android:layout_weight="2.7"
     >
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F4F4F4"
-        android:padding="13dp"
+        android:padding="5dp"
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
         tools:listitem="@layout/example_item" />
 
 </LinearLayout>
+
 
 <LinearLayout
     android:layout_width="match_parent"

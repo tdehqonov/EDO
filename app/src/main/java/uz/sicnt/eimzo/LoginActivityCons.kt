@@ -42,8 +42,8 @@ class LoginActivityCons : AppCompatActivity() {
        var mPreferences = getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
         sharedPreferenceLogin = getSharedPreferences("MyUserPref", MODE_PRIVATE)
 
-//        etUserNameCon?.setText(mPreferences?.getString("username", null))
-//        etPasswordCon?.setText(mPreferences?.getString("password", null))
+        etUserNameCon?.setText(mPreferences?.getString("username", null))
+        etPasswordCon?.setText(mPreferences?.getString("password", null))
 
         var uri = intent?.data
 
@@ -79,7 +79,7 @@ class LoginActivityCons : AppCompatActivity() {
         var isLogin = sharedPreference.getBoolean("isLogin", false)
 
         if (isLogin){   
-//            performAuth(sharedPreference.getString("username",""),sharedPreference.getString("password",""))
+            performAuth(sharedPreference.getString("username",""),sharedPreference.getString("password",""))
         }
         
         
@@ -115,8 +115,12 @@ class LoginActivityCons : AppCompatActivity() {
                     },
 
                     Response.ErrorListener { error ->
-                        Toast.makeText(this, "WIFI aloqani tekshiring!!!", Toast.LENGTH_LONG).show()
-                        tvPasswordMesage?.text = "User yoki parol xato"
+
+                        if(error.toString().contains("NoConnectionError")==true)
+                        Toast.makeText(this, "Aloqani tekshiring!!!", Toast.LENGTH_LONG).show()
+                        else {
+                            tvPasswordMesage?.text = "User yoki parol xato"
+                        }
                         buttonLogin.isEnabled=true
                     }) {
                     override fun getParams(): Map<String, String> {
